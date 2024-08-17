@@ -8,5 +8,8 @@ class Git:
     return self.username +" "+ self.useremail
   
 
-  
-a = Git('max' , 'max@gmail.com' , 'git')
+
+git_obj1 = Git('max' , 'max@gmail.com' , 'git')
+git_obj2 = Git('ali' , 'ali@gmail.com' , 'calculator')
+
+
