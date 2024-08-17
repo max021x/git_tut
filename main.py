@@ -29,11 +29,14 @@ class Company():
 
 
 
+class NoUpdateDictionary(dict):
+  def __setitem__(self, key, value) -> None:
+    if key in self:
+      raise KeyError('key allreay exist ..')
+    super().__setitem__(key  , value)
 
-git_obj1 = Git('max' , 'max@gmail.com' , 'git')
-git_obj2 = Git('ali' , 'ali@gmail.com' , 'calculator')
-company = Company(3)
 
-new_co = company + git_obj1 + git_obj2
-for repo in new_co:
-  print(repo)
+
+dic = NoUpdateDictionary()
+dic['test'] = 12
+dic['test'] = 20
